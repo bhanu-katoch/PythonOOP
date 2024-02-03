@@ -28,5 +28,7 @@ item2 = Item("Laptop", 1000, 3)
 item3 = Item("Cable", 10, 5)
 item4 = Item("Mouse", 50, 5)
 item5 = Item("Keyboard", 75, 5)
-
+item1.pay_rate=0.7
+item1.apply_discount()
+print(item1.price)
 print(Item.all)
