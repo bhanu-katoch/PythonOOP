@@ -13,3 +13,7 @@ class Phone(Item):
 
         # Assign to self object
         self.broken_phones = broken_phones
+        
+phone1=Phone("js",500,6,1)
+phone1.name="bh"
+print(phone1)

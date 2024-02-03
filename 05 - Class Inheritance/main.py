@@ -66,5 +66,9 @@ class Phone(Item):
         self.broken_phones = broken_phones
 
 phone1 = Phone("jscPhonev10", 500, 5, 1)
-
+phone2 = Phone("jscPhonev11", 600, 2, 1)
+print(phone1.calculate_total_price())
+print()
+Item.instantiate_from_csv() 
 print(Item.all)
+print()

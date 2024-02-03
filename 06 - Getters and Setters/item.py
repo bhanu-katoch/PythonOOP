@@ -10,7 +10,7 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero!"
 
         # Assign to self object
-        self.__name = name
+        self._name = name
         self.price = price
         self.quantity = quantity
 
@@ -20,14 +20,14 @@ class Item:
     @property
     # Property Decorator = Read-Only Attribute
     def name(self):
-        return self.__name
+        return self._name
 
-    @name.setter
-    def name(self, value):
-        if len(value) > 10:
-            raise Exception("The name is too long!")
-        else:
-            self.__name = value
+    # @name.setter
+    # def name(self, value):
+    #     if len(value) > 10:
+    #         raise Exception("The name is too long!")
+    #     else:
+    #         self.__name = value
 
     def calculate_total_price(self):
         return self.price * self.quantity
