@@ -1,9 +1,9 @@
 import csv
 
-
 class Item:
-    pay_rate = 0.8 # The pay rate after 20% discount
+    pay_rate = 0.8  # The pay rate after 20% discount
     all = []
+
     def __init__(self, name: str, price: float, quantity=0):
         # Run validations to the received arguments
         assert price >= 0, f"Price {price} is not greater than or equal to zero!"
@@ -37,7 +37,7 @@ class Item:
             )
 
     @staticmethod
-    def is_integer(num):
+    def is_intg(num):
         # We will count out the floats that are point zero
         # For i.e: 5.0, 10.0
         if isinstance(num, float):
@@ -50,3 +50,7 @@ class Item:
 
     def __repr__(self):
         return f"Item('{self.name}', {self.price}, {self.quantity})"
+
+Item.instantiate_from_csv()
+print(Item.all)
+print(Item.is_intg(7.0))
